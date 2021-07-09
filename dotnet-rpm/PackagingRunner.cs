@@ -109,7 +109,7 @@ namespace Dotnet.Packaging
                     }
 
                     const string PackageReferenceItemType = "PackageReference";
-                    const string PackageId = "Packaging.Targets";
+                    const string PackageId = "Packaging.Targets.Vix";
                     if (!propsFile.GetItemsByEvaluatedInclude(PackageId).Any(i => i.ItemType == PackageReferenceItemType && i.EvaluatedInclude == PackageId))
                     {
                         // Using the -* suffix will allow us to match both released and prereleased versions, in the absence
@@ -227,7 +227,7 @@ namespace Dotnet.Packaging
                 lockFile = serializer.Deserialize<LockFile>(jsonReader);
             }
 
-            if (!lockFile.Libraries.Any(l => l.Key.StartsWith("Packaging.Targets/")))
+            if (!lockFile.Libraries.Any(l => l.Key.StartsWith("Packaging.Targets")))
             {
                 Console.Error.WriteLine($"The project '{Path.GetFileName(projectFilePath)}' doesn't have a PackageReference to Packaging.Targets.");
                 Console.Error.WriteLine($"Please run 'dotnet {this.commandName} install', and try again.");

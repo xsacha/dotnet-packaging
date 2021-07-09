@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp2.1;netcoreapp3.0;net5.0</TargetFrameworks>
+    <TargetFrameworks>net5.0</TargetFrameworks>
     <PackageTags>dotnet cli packaging deb debian ubuntu mint installer</PackageTags>
     <Description>Create Debian and Ubuntu installers (.deb files ) of your .NET Core projects straight from the command line.
 
@@ -9,7 +9,7 @@ Once you've installed this package as a .NET CLI tool, run dotnet deb to generat
 
 See https://github.com/qmfrederik/dotnet-packaging/ for more information on how to use dotnet deb.</Description>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>dotnet-deb</ToolCommandName>
+    <ToolCommandName>dotnet-deb-vix</ToolCommandName>
   </PropertyGroup>
 
   <ItemGroup>
